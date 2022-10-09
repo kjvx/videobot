@@ -63,46 +63,6 @@ async def on_ready():
 
 
 
-@bot.slash_command()
-async def ping( ctx, name):
-    await ctx.respond(f"Pong! our bots ping is {bot.latency} seconds,  your name is {name}")
-
-
-
-@bot.slash_command()
-async def calculate(ctx, number1, operator, number2):
-    
-    def add(num1, num2):
-        return num1 + num2
-
-    def multiply(num1, num2):
-        return num1 * num2
-
-    def divide(num1, num2):
-        return num1 / num2
-
-    def subtract(num1, num2):
-        return num1 - num2
-
-    
-    if operator == "+":
-        result = add(int(number1), int(number2))
-
-
-        await ctx.respond(f"Done! you number is {result}")
-
-    elif operator == "-":
-        result = subtract(int(number1), int(number2))
-        await ctx.respond(f"Done! you number is {result}")
-
-    elif operator == "*":
-        result = multiply(int(number1), int(number2))
-        await ctx.respond(f"Done! you number is {result}")
-
-    elif operator == "/":
-        result = divide(int(number1), int(number2))
-        await ctx.respond(f"Done! you number is {result}")
-    
 
 
 
